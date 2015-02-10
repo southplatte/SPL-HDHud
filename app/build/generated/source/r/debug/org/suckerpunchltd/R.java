@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 public final class R {
     public static final class array {
@@ -635,31 +635,31 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Dial_incrementPerLargeNotch org.harleydroid:incrementPerLargeNotch}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_incrementPerSmallNotch org.harleydroid:incrementPerSmallNotch}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_lowerTitle org.harleydroid:lowerTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_odoBackgroundColor org.harleydroid:odoBackgroundColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_odoColor org.harleydroid:odoColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeErrorColor org.harleydroid:rangeErrorColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeErrorMaxValue org.harleydroid:rangeErrorMaxValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeErrorMinValue org.harleydroid:rangeErrorMinValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeOkColor org.harleydroid:rangeOkColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeOkMaxValue org.harleydroid:rangeOkMaxValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeOkMinValue org.harleydroid:rangeOkMinValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeWarningColor org.harleydroid:rangeWarningColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeWarningMaxValue org.harleydroid:rangeWarningMaxValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_rangeWarningMinValue org.harleydroid:rangeWarningMinValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_scaleCenterValue org.harleydroid:scaleCenterValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_scaleColor org.harleydroid:scaleColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_scaleMaxValue org.harleydroid:scaleMaxValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_scaleMinValue org.harleydroid:scaleMinValue}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_showGauge org.harleydroid:showGauge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_showHand org.harleydroid:showHand}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_showOdo org.harleydroid:showOdo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_showRange org.harleydroid:showRange}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_totalNotches org.harleydroid:totalNotches}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_unitTitle org.harleydroid:unitTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Dial_upperTitle org.harleydroid:upperTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_incrementPerLargeNotch org.suckerpunchltd:incrementPerLargeNotch}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_incrementPerSmallNotch org.suckerpunchltd:incrementPerSmallNotch}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_lowerTitle org.suckerpunchltd:lowerTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_odoBackgroundColor org.suckerpunchltd:odoBackgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_odoColor org.suckerpunchltd:odoColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeErrorColor org.suckerpunchltd:rangeErrorColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeErrorMaxValue org.suckerpunchltd:rangeErrorMaxValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeErrorMinValue org.suckerpunchltd:rangeErrorMinValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeOkColor org.suckerpunchltd:rangeOkColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeOkMaxValue org.suckerpunchltd:rangeOkMaxValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeOkMinValue org.suckerpunchltd:rangeOkMinValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeWarningColor org.suckerpunchltd:rangeWarningColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeWarningMaxValue org.suckerpunchltd:rangeWarningMaxValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_rangeWarningMinValue org.suckerpunchltd:rangeWarningMinValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_scaleCenterValue org.suckerpunchltd:scaleCenterValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_scaleColor org.suckerpunchltd:scaleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_scaleMaxValue org.suckerpunchltd:scaleMaxValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_scaleMinValue org.suckerpunchltd:scaleMinValue}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_showGauge org.suckerpunchltd:showGauge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_showHand org.suckerpunchltd:showHand}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_showOdo org.suckerpunchltd:showOdo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_showRange org.suckerpunchltd:showRange}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_totalNotches org.suckerpunchltd:totalNotches}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_unitTitle org.suckerpunchltd:unitTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Dial_upperTitle org.suckerpunchltd:upperTitle}</code></td><td></td></tr>
            </table>
            @see #Dial_incrementPerLargeNotch
            @see #Dial_incrementPerSmallNotch
@@ -697,7 +697,7 @@ containing a value of this type.
             0x7f010018
         };
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#incrementPerLargeNotch}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#incrementPerLargeNotch}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -707,11 +707,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:incrementPerLargeNotch
+          @attr name org.suckerpunchltd:incrementPerLargeNotch
         */
         public static final int Dial_incrementPerLargeNotch = 1;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#incrementPerSmallNotch}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#incrementPerSmallNotch}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -721,11 +721,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:incrementPerSmallNotch
+          @attr name org.suckerpunchltd:incrementPerSmallNotch
         */
         public static final int Dial_incrementPerSmallNotch = 2;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#lowerTitle}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#lowerTitle}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -735,11 +735,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:lowerTitle
+          @attr name org.suckerpunchltd:lowerTitle
         */
         public static final int Dial_lowerTitle = 19;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#odoBackgroundColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#odoBackgroundColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -749,11 +749,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:odoBackgroundColor
+          @attr name org.suckerpunchltd:odoBackgroundColor
         */
         public static final int Dial_odoBackgroundColor = 17;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#odoColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#odoColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -763,11 +763,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:odoColor
+          @attr name org.suckerpunchltd:odoColor
         */
         public static final int Dial_odoColor = 16;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeErrorColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeErrorColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -777,11 +777,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeErrorColor
+          @attr name org.suckerpunchltd:rangeErrorColor
         */
         public static final int Dial_rangeErrorColor = 13;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeErrorMaxValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeErrorMaxValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -791,11 +791,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeErrorMaxValue
+          @attr name org.suckerpunchltd:rangeErrorMaxValue
         */
         public static final int Dial_rangeErrorMaxValue = 15;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeErrorMinValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeErrorMinValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -805,11 +805,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeErrorMinValue
+          @attr name org.suckerpunchltd:rangeErrorMinValue
         */
         public static final int Dial_rangeErrorMinValue = 14;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeOkColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeOkColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -819,11 +819,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeOkColor
+          @attr name org.suckerpunchltd:rangeOkColor
         */
         public static final int Dial_rangeOkColor = 7;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeOkMaxValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeOkMaxValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -833,11 +833,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeOkMaxValue
+          @attr name org.suckerpunchltd:rangeOkMaxValue
         */
         public static final int Dial_rangeOkMaxValue = 9;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeOkMinValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeOkMinValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -847,11 +847,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeOkMinValue
+          @attr name org.suckerpunchltd:rangeOkMinValue
         */
         public static final int Dial_rangeOkMinValue = 8;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeWarningColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeWarningColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -861,11 +861,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeWarningColor
+          @attr name org.suckerpunchltd:rangeWarningColor
         */
         public static final int Dial_rangeWarningColor = 10;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeWarningMaxValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeWarningMaxValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -875,11 +875,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeWarningMaxValue
+          @attr name org.suckerpunchltd:rangeWarningMaxValue
         */
         public static final int Dial_rangeWarningMaxValue = 12;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#rangeWarningMinValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#rangeWarningMinValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -889,11 +889,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:rangeWarningMinValue
+          @attr name org.suckerpunchltd:rangeWarningMinValue
         */
         public static final int Dial_rangeWarningMinValue = 11;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#scaleCenterValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#scaleCenterValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -903,11 +903,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:scaleCenterValue
+          @attr name org.suckerpunchltd:scaleCenterValue
         */
         public static final int Dial_scaleCenterValue = 4;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#scaleColor}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#scaleColor}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -917,11 +917,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:scaleColor
+          @attr name org.suckerpunchltd:scaleColor
         */
         public static final int Dial_scaleColor = 3;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#scaleMaxValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#scaleMaxValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -931,11 +931,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:scaleMaxValue
+          @attr name org.suckerpunchltd:scaleMaxValue
         */
         public static final int Dial_scaleMaxValue = 6;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#scaleMinValue}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#scaleMinValue}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -945,11 +945,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:scaleMinValue
+          @attr name org.suckerpunchltd:scaleMinValue
         */
         public static final int Dial_scaleMinValue = 5;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#showGauge}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#showGauge}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -959,11 +959,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:showGauge
+          @attr name org.suckerpunchltd:showGauge
         */
         public static final int Dial_showGauge = 23;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#showHand}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#showHand}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -973,11 +973,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:showHand
+          @attr name org.suckerpunchltd:showHand
         */
         public static final int Dial_showHand = 22;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#showOdo}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#showOdo}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -987,11 +987,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:showOdo
+          @attr name org.suckerpunchltd:showOdo
         */
         public static final int Dial_showOdo = 24;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#showRange}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#showRange}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -1001,11 +1001,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:showRange
+          @attr name org.suckerpunchltd:showRange
         */
         public static final int Dial_showRange = 21;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#totalNotches}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#totalNotches}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -1015,11 +1015,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:totalNotches
+          @attr name org.suckerpunchltd:totalNotches
         */
         public static final int Dial_totalNotches = 0;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#unitTitle}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#unitTitle}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -1029,11 +1029,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:unitTitle
+          @attr name org.suckerpunchltd:unitTitle
         */
         public static final int Dial_unitTitle = 20;
         /**
-          <p>This symbol is the offset where the {@link org.harleydroid.R.attr#upperTitle}
+          <p>This symbol is the offset where the {@link org.suckerpunchltd.R.attr#upperTitle}
           attribute's value can be found in the {@link #Dial} array.
 
 
@@ -1043,7 +1043,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name org.harleydroid:upperTitle
+          @attr name org.suckerpunchltd:upperTitle
         */
         public static final int Dial_upperTitle = 18;
     };

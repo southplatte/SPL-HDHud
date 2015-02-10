@@ -17,7 +17,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -65,7 +65,7 @@ public class HarleyDroidLogger implements HarleyDataDashboardListener, HarleyDat
 			mGPS.start();
 
 		try {
-			File path = new File(Environment.getExternalStorageDirectory(), "/Android/data/org.harleydroid/files/");
+			File path = new File(Environment.getExternalStorageDirectory(), "/Android/data/org.suckerpunchltd/files/");
 			path.mkdirs();
 			File logFile = new File(path, "harley-" + TIMESTAMP_FORMAT.format(new Date()) + ".log.gz");
 			mLog = new BufferedOutputStream(new GZIPOutputStream(new FileOutputStream(logFile, false)));

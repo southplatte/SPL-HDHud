@@ -20,7 +20,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 

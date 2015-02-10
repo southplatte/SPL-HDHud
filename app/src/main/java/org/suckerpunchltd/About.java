@@ -17,7 +17,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -48,7 +48,7 @@ public class About {
 		dialog.show();
 
 		try {
-			PackageInfo pi = activity.getPackageManager().getPackageInfo("org.harleydroid", PackageManager.GET_META_DATA);
+			PackageInfo pi = activity.getPackageManager().getPackageInfo("org.suckerpunchltd", PackageManager.GET_META_DATA);
 			((TextView) dialog.findViewById(R.id.about_version)).setText(pi.versionName);
 		} catch (NameNotFoundException e) { }
 	}

@@ -17,54 +17,36 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
-//import java.util.UUID;
-
-import android.bluetooth.BluetoothDevice;
 import android.util.Log;
 
-public class HarleyDroidInterface implements J1850Interface
+public class EmulatorInterface implements J1850Interface
 {
 	private static final boolean D = false;
-	private static final String TAG = HarleyDroidInterface.class.getSimpleName();
+	private static final String TAG = EmulatorInterface.class.getSimpleName();
 
-	//private static final UUID SPP_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-	private static final int ATMA_TIMEOUT = 10000;
 	private static final int MAX_ERRORS = 10;
 
 	private HarleyDroidService mHarleyDroidService;
 	private HarleyData mHD;
-	private ConnectThread mConnectThread;
-	private PollThread mPollThread;
-	private SendThread mSendThread;
-	private BluetoothDevice mDevice;
-	private NonBlockingBluetoothSocket mSock = null;
+	private PollThread mPollThread = null;
+	private SendThread mSendThread = null;
 
-	public HarleyDroidInterface(HarleyDroidService harleyDroidService, BluetoothDevice device) {
+	public EmulatorInterface(HarleyDroidService harleyDroidService) {
 		mHarleyDroidService = harleyDroidService;
-		mDevice = device;
 	}
 
 	public void connect(HarleyData hd) {
-		if (D) Log.d(TAG, "connect");
+		if (D) Log.d(TAG, "connect: " + hd);
 
 		mHD = hd;
-		if (mConnectThread != null)
-			mConnectThread.cancel();
-		mConnectThread = new ConnectThread();
-		mConnectThread.start();
+		mHarleyDroidService.connected();
 	}
 
 	public void disconnect() {
 		if (D) Log.d(TAG, "disconnect");
 
-		if (mConnectThread != null) {
-			mConnectThread.cancel();
-			mConnectThread = null;
-		}
 		if (mPollThread != null) {
 			mPollThread.cancel();
 			mPollThread = null;
@@ -73,15 +55,11 @@ public class HarleyDroidInterface implements J1850Interface
 			mSendThread.cancel();
 			mSendThread = null;
 		}
-		if (mSock != null) {
-			mSock.close();
-			mSock = null;
-		}
 	}
 
 	public void startSend(String type[], String ta[], String sa[],
-			 			  String command[], String expect[],
-			 			  int timeout[], int delay) {
+						  String command[], String expect[],
+						  int timeout[], int delay) {
 		if (D) Log.d(TAG, "send: " + type + "-" + ta + "-" +
 					 sa + "-" + command + "-" + expect);
 
@@ -89,9 +67,8 @@ public class HarleyDroidInterface implements J1850Interface
 			mPollThread.cancel();
 			mPollThread = null;
 		}
-		if (mSendThread != null) {
+		if (mSendThread != null)
 			mSendThread.cancel();
-		}
 		mSendThread = new SendThread(type, ta, sa, command, expect, timeout, delay);
 		mSendThread.start();
 	}
@@ -108,95 +85,69 @@ public class HarleyDroidInterface implements J1850Interface
 	public void startPoll() {
 		if (D) Log.d(TAG, "startPoll");
 
-		if (mSendThread != null) {
-			mSendThread.cancel();
-			mSendThread = null;
-		}
-		if (mPollThread != null) {
+		if (mPollThread != null)
 			mPollThread.cancel();
-		}
 		mPollThread = new PollThread();
 		mPollThread.start();
-	}
-
-	static byte[] myGetBytes(String s, int start, int end) {
-		byte[] result = new byte[end - start];
-		for (int i = start; i < end; i++) {
-			result[i - start] = (byte) s.charAt(i);
-		}
-		return result;
-	}
-
-	static byte[] myGetBytes(String s) {
-		return myGetBytes(s, 0, s.length());
-	}
-
-	private class ConnectThread extends Thread {
-
-		public void run() {
-
-			setName("HarleyDroidInterface: ConnectThread");
-
-			try {
-				mSock = new NonBlockingBluetoothSocket();
-				mSock.connect(mDevice);
-			} catch (IOException e1) {
-				Log.e(TAG, "connect() socket failed", e1);
-				mSock.close();
-				mSock = null;
-				mHarleyDroidService.disconnected(HarleyDroid.STATUS_ERROR);
-				return;
-			}
-
-			mHarleyDroidService.connected();
-		}
-
-		public void cancel() {
-		}
 	}
 
 	private class PollThread extends Thread {
 		private boolean stop = false;
 
 		public void run() {
-			int errors = 0, idxJ;
+			int odo = 0;
+			int fuel = 0;
+			int errors = 0;
 
-			setName("HarleyDroidInterface: PollThread");
+			setName("EmulatorInterface: PollThread");
 			mHarleyDroidService.startedPoll();
 
 			while (!stop) {
 				String line;
 
 				try {
-					line = mSock.readLine(ATMA_TIMEOUT);
-				} catch (TimeoutException e1) {
-					if (!stop)
-						mHarleyDroidService.disconnected(HarleyDroid.STATUS_NODATA);
-					if (mSock != null) {
-						mSock.close();
-						mSock = null;
-					}
-					return;
+					Thread.sleep(500);
+				} catch (InterruptedException e1) {
 				}
 
-				mHD.setRaw(myGetBytes(line));
-
-				// strip off timestamp
-				idxJ = line.indexOf('J');
-				if (idxJ != -1) {
-					if (J1850.parse(myGetBytes(line, idxJ + 1, line.length()), mHD))
-						errors = 0;
-					else
-						++errors;
+				/* send several messages to update the UI */
+				mHD.setOdometer(odo);
+				odo += 150;
+				mHD.setFuel(fuel);
+				fuel += 50;
+				if (odo % 100 == 0) {
+					mHD.setCheckEngine(true);
+					mHD.setTurnSignals(0);
 				}
+				else {
+					mHD.setCheckEngine(false);
+					mHD.setTurnSignals(3);
+				}
+
+				// RPM at 1053
+				line = "28 1B 10 02 10 74 4C";
+				// Speed at 100 km/h
+				line = "J4829100232000f";
+				// Odometer
+				//line = "a8 69 10 06 00 00 FF 61";
+				// ECM Sw Level
+				line = "J0CF1107C0BB085";
+				line = "J0CF1107C023134302D30371D";
+				line = "J0CF1107C11303138393045";
+
+				line = "483B402094";
+				line = "483B40A0B2";
+
+				byte[] bytes = line.getBytes();
+				mHD.setRaw(bytes);
+				if (J1850.parse(bytes, mHD))
+					errors = 0;
 				else
 					++errors;
 
 				if (errors > MAX_ERRORS) {
-					mSock.close();
-					mSock = null;
 					mHarleyDroidService.disconnected(HarleyDroid.STATUS_TOOMANYERRORS);
-					return;
+					stop = true;
 				}
 			}
 		}
@@ -216,7 +167,7 @@ public class HarleyDroidInterface implements J1850Interface
 		private int mDelay, mNewDelay;
 
 		public SendThread(String type[], String ta[], String sa[], String command[], String expect[], int timeout[], int delay) {
-			setName("HarleyDroidInterface: SendThread");
+			setName("EmulatorInterface: SendThread");
 			mType = type;
 			mTA = ta;
 			mSA = sa;
@@ -236,14 +187,10 @@ public class HarleyDroidInterface implements J1850Interface
 				mNewTimeout = timeout;
 				mNewDelay = delay;
 				newData = true;
-				this.interrupt();
 			}
 		}
 
 		public void run() {
-			int errors = 0;
-			String recv;
-			int idxJ;
 
 			mHarleyDroidService.startedSend();
 
@@ -262,7 +209,7 @@ public class HarleyDroidInterface implements J1850Interface
 					}
 				}
 
-				for (int i = 0; !stop && !newData && i < mCommand.length; i++) {
+				for (int i = 0; !stop && i < mCommand.length; i++) {
 
 					byte[] data = new byte[3 + mCommand[i].length() / 2];
 					data[0] = (byte)Integer.parseInt(mType[i], 16);
@@ -276,61 +223,23 @@ public class HarleyDroidInterface implements J1850Interface
 					if (D) Log.d(TAG, "send: " + mType[i] + "-" + mTA[i] + "-" +
 							 mSA[i] + "-" + command + "-" + mExpect[i]);
 
+					// fake some answer...
+					//String line = "J0CF1107C11303138393045";
+					String line = "6CF1105901341167";
+
+					byte[] bytes = line.getBytes();
+					mHD.setRaw(bytes);
+					J1850.parse(bytes, mHD);
+
 					try {
-						recv = mSock.chat(mType[i] + mTA[i] + mSA[i] + command, mExpect[i], mTimeout[i]);
-
-						if (stop || newData)
-							break;
-
-						// split into lines and strip off timestamp
-						String lines[] = recv.split("\n");
-						for (int j = 0; j < lines.length; ++j) {
-							mHD.setRaw(myGetBytes(lines[j]));
-							idxJ = lines[j].indexOf('J');
-							if (idxJ != -1)
-								J1850.parse(myGetBytes(lines[j], idxJ + 1, lines[j].length()), mHD);
-						}
-						errors = 0;
-					} catch (IOException e) {
-						mHarleyDroidService.disconnected(HarleyDroid.STATUS_ERROR);
-						mSock.close();
-						mSock = null;
-						return;
-					} catch (TimeoutException e) {
-
-						// split into lines and strip off timestamp
-						String lines[] = e.getMessage().split("\n");
-						for (int j = 0; j < lines.length; ++j) {
-							mHD.setRaw(myGetBytes(lines[j]));
-							idxJ = lines[j].indexOf('J');
-							if (idxJ != -1)
-								J1850.parse(myGetBytes(lines[j], idxJ + 1, lines[j].length()), mHD);
-						}
-
-						++errors;
-						if (errors > MAX_ERRORS) {
-							mHarleyDroidService.disconnected(HarleyDroid.STATUS_TOOMANYERRORS);
-							if (mSock != null) {
-								mSock.close();
-								mSock = null;
-							}
-							return;
-						}
-					}
-
-					if (!stop && !newData) {
-						try {
-							Thread.sleep(mTimeout[i]);
-						} catch (InterruptedException e) {
-						}
+						Thread.sleep(mTimeout[i]);
+					} catch (InterruptedException e) {
 					}
 				}
 
-				if (!stop && !newData) {
-					try {
-						Thread.sleep(mDelay);
-					} catch (InterruptedException e) {
-					}
+				try {
+					Thread.sleep(mDelay);
+				} catch (InterruptedException e) {
 				}
 			}
 		}

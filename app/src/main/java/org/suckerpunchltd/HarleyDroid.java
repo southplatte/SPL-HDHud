@@ -17,7 +17,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import java.lang.ref.WeakReference;
 
@@ -85,7 +85,7 @@ public abstract class HarleyDroid extends Activity implements ServiceConnection,
 		if (D) Log.d(TAG, "onCreate()");
 		super.onCreate(savedInstanceState);
 
-		if (DTRACE) Debug.startMethodTracing("harleydroid");
+		if (DTRACE) Debug.startMethodTracing("suckerpunchltd");
 
 		mHandler = new HarleyDroidHandler(this);
 		mToast = Toast.makeText(this, "", Toast.LENGTH_LONG);

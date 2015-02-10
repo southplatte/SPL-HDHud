@@ -17,7 +17,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +39,7 @@ public class HarleyDroidSettings extends PreferenceActivity implements OnSharedP
 	
 	//Add to provide fragment check on Android KitKat 4.4 and greater devices so preferences is not broken
 	protected boolean isValidFragment(String fragmentName) {
-		return "org.harleydroid.HarleyDroidSettings$Fragment".equals(fragmentName);
+		return "org.suckerpunchltd.HarleyDroidSettings$Fragment".equals(fragmentName);
 	}
 
 	@SuppressWarnings("deprecation")

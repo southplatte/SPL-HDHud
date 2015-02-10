@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -28,7 +28,7 @@ import java.io.Closeable;
 
 /**
  * Displays an EULA ("End User License Agreement") that the user has to accept before
- * using the application. Your application should call {@link Eula#show(android.app.Activity)}
+ * using the application. Your application should call {@link Eula#*show(android.app.Activity)}
  * in the onCreate() method of the first activity. If the user accepts the EULA, it will never
  * be shown again. If the user refuses, {@link android.app.Activity#finish()} is invoked
  * on your activity.

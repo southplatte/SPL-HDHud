@@ -25,12 +25,10 @@
 // NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 // EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-package org.harleydroid;
+package org.suckerpunchltd;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
-import org.harleydroid.R;
 
 import android.content.Context;
 import android.graphics.Bitmap;
