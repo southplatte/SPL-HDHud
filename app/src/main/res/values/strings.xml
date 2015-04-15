@@ -136,11 +136,11 @@
 <string name="eula_accept">Accept</string>
 <string name="eula_refuse">Refuse</string>
 
-<string name="about_copyright">&#169;2010&#8211;2012 Stelian Pop, &#169; 2015 Sucker Punch Ltd.</string>
+<string name="about_copyright">&#169;2015 Sucker Punch Ltd.</string>
 <string name="about_version">Version:</string>
 <string name="about_unknown">unknown</string>
 <string name="about_support">Support:</string>
-<string name="about_weburl">http://suckerpunchltd.com/apps/support/</string>
+<string name="about_weburl">http://suckerpunchltd.com/support/</string>
 <string name="about_notendorsed">HDHud is not endorsed or certified by the Harley-Davidson Motor Company.</string>
 <string name="about_needelm327">This application requires the Sucker Punch Ltd. custom interface connected to the motorcycle diagnostic bus.</string>
 <string name="about_ok">OK</string>
