@@ -9,18 +9,18 @@
         <dex dex="/Users/bnab/Documents/SuckerPunchLtd/Apps/HD-Hud/app/build/intermediates/pre-dexed/debug/classes-ae10af73dde17a369bb45d97f27ecd8b6997c215.jar" />
     </item>
     <item
-        jar="/Users/bnab/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="/Users/bnab/Documents/SuckerPunchLtd/Apps/HD-Hud/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-c3e645ec5ce431264c51eca21cc707dadaa14cad.jar" />
-    </item>
-    <item
         jar="/Users/bnab/Documents/SuckerPunchLtd/Apps/HD-Hud/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/jars/libs/internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
         <dex dex="/Users/bnab/Documents/SuckerPunchLtd/Apps/HD-Hud/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-92c7dffd5072baede66ae4f5622471a8e6a0755e.jar" />
+    </item>
+    <item
+        jar="/Users/bnab/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/Users/bnab/Documents/SuckerPunchLtd/Apps/HD-Hud/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-c3e645ec5ce431264c51eca21cc707dadaa14cad.jar" />
     </item>
 
 </items>
